@@ -13,6 +13,14 @@ describe('Visit the Homepage', () => {
     })
 
     it('Shows the Homepage', () => {
-        cy.findByText("COVID-19 Tracking").should('exist')
+        cy.findByText('COVID-19 Tracking').should('exist')
+    })
+
+    it('Shows One Stat Block', () => {
+        cy.findByText('Jurisdiction').should('exist')
+        cy.findByText('Total Infections').should('exist')
+        cy.findByText('Total Deaths').should('exist')
+        cy.findByText('Total Population').should('exist')
+        cy.findByText('Fatality Rate').should('exist')
     })
 })
